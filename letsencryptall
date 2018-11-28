@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for D in `grep server_name /nginx/* | awk 'NF>1{print $NF}' | cut -d ';' -f 1`
+do
+  if [[ "$D" == _ ]]; then
+    continue
+  fi
+  echo "certbot certonly --webroot --webroot-path=/data/letsencrypt -d $D" >> /results
+done
