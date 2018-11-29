@@ -5,3 +5,5 @@ services:
     build: .
     volumes:
       - /path/to/nginx/conf.d:/nginx
+      - /path/to/certs:/etc/letsencrypt
+      - /path/to/certs-data:/data/letsencrypt
