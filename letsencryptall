@@ -5,5 +5,5 @@ do
   if [[ "$D" == _ ]]; then
     continue
   fi
-  echo "certbot certonly --webroot --webroot-path=/data/letsencrypt -d $D" >> /results
+  certbot certonly --webroot --webroot-path=/data/letsencrypt -d $D
 done
