@@ -2,6 +2,6 @@ FROM certbot/certbot:v0.28.0
 
 ENTRYPOINT ["/bin/busybox"]
 
-COPY letsencryptall /etc/periodic/monthly/letsencryptall
+COPY renewletsencrypt /etc/periodic/hourly/renewletsencrypt
 
 CMD ["crond", "-f"]
