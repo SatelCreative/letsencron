@@ -1,3 +1,5 @@
+OBSOLETE: Using Traefik is a much better option
+
 # letsencron
 Simple certbot modified image to renew domains with letsencrypt every month
 
